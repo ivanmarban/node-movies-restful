@@ -1,0 +1,22 @@
+{
+  "name": "node-movies-restful",
+  "version": "1.0.0",
+  "description": "RESTful API using Node.js and MongoDB",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanmarban/node-movies-restful.git"
+  },
+  "author": "Ivan Marban",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/ivanmarban/node-movies-restful/issues"
+  },
+  "homepage": "https://github.com/ivanmarban/node-movies-restful",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "^4.0.0",
+    "morgan": "^1.5.2"
+  }
+}
