@@ -41,11 +41,11 @@ router.post('/api/v1/movie', function(req, res) {
 router.put('/api/v1/movie/:id', function(req, res) {	
 	Movie.findById(req.params.id, function(err, movie) {
 		movie.title = req.body.title;
-		year = req.body.year;
-		rated = req.body.rated;
-		runtime = req.body.runtime;
-		genre = req.body.genre;
-		director = req.body.director;
+		movie.year = req.body.year;
+		movie.rated = req.body.rated;
+		movie.runtime = req.body.runtime;
+		movie.genre = req.body.genre;
+		movie.director = req.body.director;
 		movie.save(function(err) {
 			if (err) {
 				return res.status(500).jsonp({status : 500, message : err.message });
