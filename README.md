@@ -11,7 +11,7 @@ A simple RESTful API server which supports basic CRUD operations.
 ## Installation
 Clone this repository and install node modules
 ```sh
-$ git clone git@github.com:ivanmarban/node-movies-restful.git
+$ git clone https://github.com/ivanmarban/node-movies-restful.git
 $ cd node-movies-restful
 $ npm install
 ```
