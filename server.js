@@ -4,7 +4,10 @@ var express		= require('express'),
 	mongoose	= require('mongoose'),
 	cfg			= require('./config/config');
 
-mongoose.connect('mongodb://'+cfg.mongo.uri+'/'+cfg.mongo.db, function(err, res) {
+var mongohost = process.env.MONGODB_HOST || cfg.mongo.uri;
+var mongodb = process.env.MONGODB_DB || cfg.mongo.db;
+
+mongoose.connect('mongodb://'+mongohost+'/'+mongodb, function(err, res) {
 	if(err) throw err;
 	console.log('Connected to MongoDB');
 });
