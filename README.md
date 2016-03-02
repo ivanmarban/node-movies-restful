@@ -7,6 +7,7 @@ A simple RESTful API server which supports basic CRUD operations.
 - cURL
 - git
 - MongoDB
+- docker
 
 ## Installation
 Clone this repository and install node modules
@@ -18,6 +19,15 @@ $ npm install
 Modify config/config.js for your environment and start server
 ```sh
 $ node server.js
+```
+## Docker
+Run mongodb container
+```sh
+$ docker run -d -ti --name movies-database mvertes/alpine-mongo 
+```
+Run RESTful API container
+```sh
+$ docker run -d -ti -p 3000:3000 --name movies-back-end --link movies-database:db -e MONGODB_DB=movies -e MONGODB_HOST=db -e PORT=3000 ivanmarban/movies-back-end 
 ```
 ##Testing the API using cURL
 Get all movies:
