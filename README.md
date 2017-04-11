@@ -29,7 +29,7 @@ Run RESTful API container
 ```sh
 $ docker run -d -ti -p 3000:3000 --name movies-back-end --link movies-database:db -e MONGODB_DB=movies -e MONGODB_HOST=db -e PORT=3000 ivanmarban/movies-back-end 
 ```
-##Testing the API using cURL
+## Testing the API using cURL
 Get all movies:
 ```sh
 $ curl -i -X GET http://localhost:3000/api/v1/movies 
@@ -51,7 +51,8 @@ Modify movie with _id value of 5514677bda31962c1189aa23
 $ curl -i -X PUT -H 'Content-Type: application/json' -d '{"title": "2001: A Space Odyssey","year": "1968","rated": "G","runtime": "160 min","genre": "Sci-Fi","director": "Stanley Kubrick"}' http://localhost:3000/api/v1/movie
 ```
 
-##REST API
+## REST API
+
 URL  | HTTP Verb | POST Body | Result 
 ------------- | ------------- | ------------- | -------------
 /api/v1/movies  | GET  | empty  | Return all movies
